@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 published: true
 ---
-https://www.cs.ubc.ca/~ichaos/
+[https://www.cs.ubc.ca/~ichaos/](https://www.cs.ubc.ca/~ichaos/)
 
 ### Contact me
 
