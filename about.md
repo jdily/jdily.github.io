@@ -5,6 +5,7 @@ permalink: /about/
 published: true
 ---
 https://www.cs.ubc.ca/~ichaos/
-### Contact me
 
+### Contact me
+jdilyshen@gmail.com
 
