@@ -2,9 +2,9 @@
 layout: page
 title: About
 permalink: /about/
-published: false
+published: true
 ---
-
+https://www.cs.ubc.ca/~ichaos/
 ### Contact me
 
 
