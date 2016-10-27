@@ -34,6 +34,7 @@ I also schedule a daily backup for everyday by
 0 2 * * * /opt/gitlab/bin/gitlab-rake gitlab:backup:create CRON=1
 ```
 ---
+
 ## TODO
 
 * set the sync between backup files to my dropbox.
