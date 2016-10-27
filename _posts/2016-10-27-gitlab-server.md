@@ -14,6 +14,7 @@ I set up a gitlab server on my ubuntu server, here is the path and relevant comm
   * back up path : **backup_path**
 
 after configuring, run
+
 ```
 sudo gitlab-ctl reconfigure
 ```
