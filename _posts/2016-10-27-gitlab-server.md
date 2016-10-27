@@ -2,7 +2,6 @@
 layout: post
 title: GitLab configuration and running.
 ---
-## GitLab configuration
 
 I set up a gitlab server on my ubuntu server, here is the path and relevant commands.
 
