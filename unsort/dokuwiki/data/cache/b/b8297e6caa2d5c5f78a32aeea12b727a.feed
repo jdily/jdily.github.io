@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/feed.php">
+        <title>Modeling Area</title>
+        <description></description>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/</link>
+        <image rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/lib/images/favicon.ico" />
+       <dc:date>2010-07-13T19:53:55+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=load_video&amp;rev=1250524968&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=model_fitting&amp;rev=1250525261&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=ocula&amp;rev=1275893870&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=paperpool&amp;rev=1265853695&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=related_work&amp;rev=1269437808&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=start&amp;rev=1275892437&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=stereo_depth&amp;rev=1250525249&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=ui&amp;rev=1250525236&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=video_foregroud_background_split&amp;rev=1250579294&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/lib/images/favicon.ico">
+        <title>Modeling Area</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/</link>
+        <url>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=load_video&amp;rev=1250524968&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-08-18T00:02:48+08:00</dc:date>
+        <title>load_video</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=load_video&amp;rev=1250524968&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=model_fitting&amp;rev=1250525261&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-08-18T00:07:41+08:00</dc:date>
+        <title>model_fitting</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=model_fitting&amp;rev=1250525261&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=ocula&amp;rev=1275893870&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-06-07T14:57:50+08:00</dc:date>
+        <title>ocula</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=ocula&amp;rev=1275893870&amp;do=diff</link>
+        <description>Ocula 是 The Foundry 官方開發給 Nuke（未來應該會提供給其它 compositing software）用，專門用來處理與 stereo 有關的 plugin，在這邊放上來，供每個人之後參考用。
+
+PS. All snapshots of Nuke and related plugins are copyrighted to The Foundry and related pluging developers. They are here just for academic usage only.</description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=paperpool&amp;rev=1265853695&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-11T10:01:35+08:00</dc:date>
+        <title>paperpool</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=paperpool&amp;rev=1265853695&amp;do=diff</link>
+        <description>雜亂的paper pool
+
+這區的paper待分類
+
+
+	*  Model fitting and Texture mapping
+		*   Photogrammetric Texture Mapping using Casual Images
+
+	*  View Interpolation
+		*   High-Quality Video View Interpolation Using a Layered Representation
+		*   Moving Gradients: A Path-Based Method for Plausible Image Interpolation</description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=related_work&amp;rev=1269437808&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-03-24T21:36:48+08:00</dc:date>
+        <title>related_work</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=related_work&amp;rev=1269437808&amp;do=diff</link>
+        <description>Paper的related work
+
+Deformation
+
+Subspace gradient domain mesh deformation   download paper
+
+Huang, Jin
+Shi, Xiaohan
+Liu, Xinguo
+Zhou, Kun
+Wei, Li-Yi
+Teng, Shang-Hua 
+
+
+Large mesh deformation using the volumetric graph Laplacian  download paper
+
+Zhou, Kun
+Huang, Jin
+Snyder, John
+Liu, Xinguo
+Bao, Hujun
+Guo, Baining
+Shum, Heung-Yeung</description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=start&amp;rev=1275892437&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-06-07T14:33:57+08:00</dc:date>
+        <title>start</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=start&amp;rev=1275892437&amp;do=diff</link>
+        <description>*  加入使用者: 蔡昆修
+	*  將放入deform&amp;flexi的related work
+
+	*  這區是先前找的, 未分類的paper paperpool
+	*  這區是找來要放Deform&amp;Flexi model fitting related work的  related work
+	*  Ocula
+
+	*   語法教學</description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=stereo_depth&amp;rev=1250525249&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-08-18T00:07:29+08:00</dc:date>
+        <title>stereo_depth</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=stereo_depth&amp;rev=1250525249&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=ui&amp;rev=1250525236&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-08-18T00:07:16+08:00</dc:date>
+        <title>ui</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=ui&amp;rev=1250525236&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=video_foregroud_background_split&amp;rev=1250579294&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-08-18T15:08:14+08:00</dc:date>
+        <title>video_foregroud_background_split</title>
+        <link>http://www.cmlab.csie.ntu.edu.tw/~jdily/dokuwiki/doku.php?id=video_foregroud_background_split&amp;rev=1250579294&amp;do=diff</link>
+        <description>*  研究學長們之前的code, 想辦法把video中的前背景分離</description>
+    </item>
+</rdf:RDF>
