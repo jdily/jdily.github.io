@@ -143,20 +143,26 @@ html {
 
 body {
    background: #fff;
-   font-family: 'opensans-regular', sans-serif;
+   font-family: sans-serif;
    font-weight: normal;
-   font-size: 15px;
-   line-height: 30px;
+   font-size: 12px;
+   line-height: 20px;
 	color: #838C95;
 
    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
 }
 
+.about {
+    background-color : #eeeeee;
+    border-radius: 1%;
+    padding: 1%;
+    text-align: justify;
+    vertical-align:middle;
+}
 /*  2. Typography
        Vertical rhythm with leading derived from 6
 --------------------------------------------------------------------- */
-
 h1, h2, h3, h4, h5, h6 {
    color: #313131;
 	font-family: 'opensans-bold', sans-serif;
@@ -166,21 +172,22 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
    font-weight: inherit; 
    color :#3333ff;
 }
-h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
-h2 { font-size: 28px; line-height: 36px; margin-bottom: 6px; }
-h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
+h1 { font-size: 26px; line-height: 20px; margin-bottom: 12px; letter-spacing: -1px; }
+h2 { font-size: 26px; line-height: 36px; margin-bottom: 6px; }
+h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; margin-top: 10px;}
 h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
-h5 { font-size: 18px; line-height: 30px; }
-h6 { font-size: 14px; line-height: 30px; }
+h5 { font-size: 14px; line-height: 13px; margin-top:10px; margin-bottom:5px;}
+h6 { font-size: 11px; line-height: 10px; }
 .subheader { }
 
 p { 
-   margin: 0 0 30px 0; 
+   margin: 0 0 0px 0; 
    color: #313131;
 }
 
 p a {
    color: #3333ff;
+   /*color: #00AEEE;*/
 }
 
 p img { margin: 0; }
@@ -299,7 +306,8 @@ hr { border: solid #E3E3E3; border-width: 1px 0 0; clear: both; margin: 11px 0 3
 a, a:visited {
    text-decoration: none;
    outline: 0;
-   color: #11ABB0;
+   color: #3333ff;
+   /*color: #00AEEE;*/
 
    -webkit-transition: color .3s ease-in-out;
    -moz-transition: color .3s ease-in-out;
@@ -627,7 +635,7 @@ input[type="checkbox"] { display: inline; }
 
 .column, .columns {
    position: relative;
-   padding: 0 20px;
+   padding: 0 -5px;
    min-height: 1px;
    float: left;
 }
@@ -653,7 +661,7 @@ input[type="checkbox"] { display: inline; }
 .row .six         { width: 50%; }
 .row .seven       { width: 58.33333%; }
 .row .eight       { width: 66.66667%; }
-.row .nine        { width: 75%; }
+.row .nine        { width: 73%; }
 .row .ten         { width: 83.33333%; }
 .row .eleven      { width: 91.66667%; }
 .row .twelve      { width: 100%; }
@@ -741,7 +749,7 @@ properly.
 	   float: none;
 	   margin-left: 0;
 	   margin-right: 0;
-      padding: 0 30px;
+      padding: 0 10px;
    }
    .row .row { width: auto; max-width: none; margin: 0 -30px; }
 
