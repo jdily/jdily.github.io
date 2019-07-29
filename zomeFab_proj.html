@@ -1,0 +1,177 @@
+
+<html>
+  <head>
+    <!-- ==================  Google Analytics ===============  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119905150-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-119905150-1');
+   </script>
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Perception-Driven Semi-Structured Boundary Vectorization</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  
+  <body bgcolor="#dedede">
+    <div class="main">
+      <div style="margin: 0pt 15pt 25pt 15pt; padding-top:10px">
+	
+	<!-- =============== PAPER INFORMATION=================  -->
+	<div class="heading center">Perception-Driven Semi-Structured Boundary Vectorization</div><br>
+
+	<!-- OLDER AUTHOR LIST -->
+	<!-- <div class="subheading" style="margin-top:-15pt"> -->
+        <!--   <a href="http://h00shi.github.io">Shayan Hoshyari</a>, -->
+        <!--   Edoardo Dominici, -->
+        <!--   <a href="http://www.cs.ubc.ca/~sheffa/">Alla Sheffer</a> -->
+        <!--   -- University of British Columbia <br> -->
+        <!--   Nathan Carr, Duygu Ceylan, Zhaowen Wang -- Adobe <br> -->
+        <!--   I-Chao Shen -- National Taiwan University  -->
+	<!-- </div> -->
+	
+
+	<!-- NEWER AUTHOR LIST -->	
+	<div class="subheading center">
+	  Shayan&nbsp;Hoshyari<sup>1</sup>,
+	  Edoardo&nbsp;A.&nbsp;Dominici<sup>1</sup>,
+	  Alla&nbsp;Sheffer<sup>1</sup>,
+	  Nathan&nbsp;Carr<sup>2</sup>,
+	  Duygu&nbsp;Ceylan<sup>2</sup>,
+	  Zhaowen&nbsp;Wang<sup>2</sup>,
+	  I-Chao&nbsp;Shen<sup>3</sup>
+	</div><br>
+
+	<div class="subsubheading center">
+	  <sup>1</sup> University of British Columbia,
+	  <sup>2</sup> Adobe,
+	  <sup>3</sup> National Taiwan University
+	</div><br>
+	
+	<div class="subsubheading center">
+	  <span style="font-style: italic">Accepted to SIGGRAPH 2018</span>
+	</div>
+	<br>
+
+	<!-- =============== TEASER  =================  -->
+	<div align="center" style="clear:none; margin-top:10px">
+	  <img src="image/teaser.jpg" style="padding:5pt; width:60%">
+	  <div class="text" style="text-align:center; font-size:9pt; margin-top:10pt">
+	    Vectorizing artist-drawn semi-structured raster images
+	    using existing methods results in visible artifacts. Our
+	    perception-driven vectorization output is consistent with
+	    viewer expectations. Please zoom in online to see
+	    details. Input image &copy; aves --
+	    stock.adobe.com.
+	  </div>
+	</div>
+
+	<!-- =============== LINK TO Download stuff  =================  -->
+	<div class="regularHeader" style="margin-bottom:15px"> Downloads </div>
+	<div class="text">
+	  <p class="text">
+	    <b><a href="perception-driven-vectorization.pdf">Paper (6
+		MB)</a></b><br>
+<b><a href="perception-driven-boundary-vectorization-siggraph-2018-slides.pdf">
+    SIGGRAPH 2018 Slides (4 MB) </a></b><br>
+	  <b><a href="user-study.zip">User Study (4 MB)</a></b><br>
+	  <b><a href="training-data.zip">Training Data (1 MB)</a></b><br>
+	  <b><a href="executable.zip">Windows Executable (31 MB)</a></b><br>
+	  <b><a href="pff_245s1.mov">Fast Forward Video (5 MB)</a></b><br>
+	  <b><a href="more-results.pdf">More Results (4 MB)</a></b>
+	  </p>
+	</div>
+	<!-- =============== VIDEO  =================  -->
+	<!-- <div class="regularHeader" style="margin-bottom:15px">Video</div> -->
+	<!-- <div class="text" align="center"> -->
+	<!--   <iframe width="560" height="315" src="http://www.youtube.com/embed/en7ICJRGzH0" frameborder="0" allowfullscreen="", style="-webkit-box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2)"></iframe><br><br> -->
+
+
+	<!-- =============== ABSTRACT  =================  -->
+
+	  <div class="regularHeader">Abstract</div>
+	  <p class="text">
+	    Artist-drawn images with distinctly colored, piecewise
+	    continuous boundaries, which we refer to as
+	    semi-structured imagery, are very common in online raster
+	    databases and typically allow for a perceptually
+	    unambiguous mental vector interpretation.  Yet, perhaps
+	    surprisingly, existing vectorization algorithms frequently
+	    fail to generate these viewer-expected interpretations on
+	    such imagery. In particular, the vectorized region
+	    boundaries they produce frequently diverge from those
+	    anticipated by viewers. We propose a new approach to
+	    region boundary vectorization that targets semi-structured
+	    inputs and leverages observations about human perception
+	    of shapes to generate vector images consistent with viewer
+	    expectations. When viewing raster imagery observers expect
+	    the vector output to be an accurate representation of the
+	    raster input. However, perception studies suggest that
+	    viewers implicitly account for the lossy nature of the
+	    rasterization process and mentally smooth and simplify the
+	    observed boundaries. Our core algorithmic challenge is to
+	    balance these conflicting cues and obtain a piecewise
+	    continuous vectorization whose discontinuities, or
+	    corners, are aligned with human expectations.<br>
+
+	    &emsp; Our framework centers around a simultaneous spline
+	    fitting and corner detection method that combines a
+	    learned metric, that approximates human perception of
+	    boundary discontinuities on raster inputs, with
+	    perception-driven algorithmic discontinuity analysis. The
+	    resulting method balances local cues provided by the
+	    learned metric with global cues obtained by balancing
+	    simplicity and continuity expectations. Given the
+	    finalized set of corners, our framework connects those
+	    using simple, continuous curves that capture input
+	    regularities.  We demonstrate our method on a range of
+	    inputs and validate its superiority over existing
+	    alternatives via an extensive comparative user study.
+	  </p>
+
+	  <!-- =============== BIBTEX  =================  -->	
+	  <div class="regularHeader" style="margin-bottom:15px">BibTex</div>
+	  <div class="text">
+	    <pre>
+@article{ hoshyari2018vectorization,	      
+author    = {Hoshyari, Shayan and Alberto Dominici, Edoardo and Sheffer,
+             Alla and Carr, Nathan and Ceylan, Duygu and Wang, Zhaowen
+             and Shen, I-Chao},
+title     = {Perception-Driven Semi-Structured Boundary Vectorization},
+journal   = {ACM Transaction on Graphics},
+year      = {2018},
+volume    = {37},
+number    = {4},
+doi       = {10.1145/3197517.3201312},
+publisher = {ACM},
+address   = {New York, NY, USA},
+}
+	    </pre>
+	  </div>
+
+	  <!-- =============== RESULTS  =================  -->	
+	  <div class="regularHeader" style="margin-bottom:15px">Results</div>
+	  <p><img src="image/results-1.svg" style="max-width: 95%"></p>
+	  <p><img src="image/results-2.svg" style="max-width: 95%"></p>
+	  <p><img src="image/results-3.svg" style="max-width: 95%"></p>
+
+	  <p class="text">
+	    Note: some of the input images shown are copyrighted by
+	    third parties and used with their permission. See the
+	    paper for the list of third-party sources.
+	  </p>
+	  <hr style="margin-top:20px">
+	  <div class="text" style="margin-top:0; margin-left:auto; margin-right:auto">
+	    All non-third-party images are &copy; ACM.
+	  </div>
+	  <br>
+	</div>
+      </div>
+
+    </div>
+</body></html>
