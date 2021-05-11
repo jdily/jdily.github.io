@@ -612,6 +612,10 @@ input[type="checkbox"] { display: inline; }
 
 /* default
 --------------------------------------------------------------- */
+.summary {
+   color: #838C95;
+}
+
 .row {
    width: 96%;
    max-width: 800px;
