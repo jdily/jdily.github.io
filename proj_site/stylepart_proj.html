@@ -1,0 +1,129 @@
+
+<html>
+  <head>
+    <!-- ==================  Google Analytics ===============  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119905150-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-119905150-1');
+   </script>
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ClipGen: A Deep Generative Model for Clipart Vectorization and Synthesis</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/proj_main.css">
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" type="image/png" href="../images/ichao_potrait.png">
+  </head>
+  
+  <body bgcolor="#dedede">
+    <div class="main">
+      <div style="margin: 0pt 15pt 25pt 15pt; padding-top:10px">
+	
+	<!-- =============== PAPER INFORMATION=================  -->
+	<div class="heading center">StylePart: Image-based Shape Part Manipulation</div><br>
+	
+
+	<!-- NEWER AUTHOR LIST -->	
+	<div class="subheading center">
+	  <a href="http://jdily.github.io">I-Chao Shen</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Li-Wen Su &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://kevincosner.github.io/">Yu-Ting Wu</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://graphics.im.ntu.edu.tw/~robin/">Bing-Yu Chen</a>
+	</div><br>
+
+	<div class="subsubheading center">
+	  <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a> &nbsp; <a href="https://www.ntu.edu.tw">National Taiwan University</a>
+	</div><br>
+	
+  <!--
+	<div class="subsubheading center">
+	  <span style="font-style: italic">Accepted to Computer Graphics Forum (CGF) 2019</span>
+	</div>
+	<br>
+  -->
+
+	<!-- =============== TEASER  =================  -->
+	<div align="center" style="clear:none; margin-top:10px">
+	  <img src="../resource/clipgen/clipgen_img.png" style="padding:5pt; width:85%">
+	  <!-- <div class="text" style="text-align:center; font-size:9pt; margin-top:10pt">
+	    Vectorizing artist-drawn semi-structured raster images
+	    using existing methods results in visible artifacts. Our
+	    perception-driven vectorization output is consistent with
+	    viewer expectations. Please zoom in online to see
+	    details. Input image &copy; aves --
+	    stock.adobe.com.
+	  </div> -->
+	</div>
+
+	<!-- =============== LINK TO Download stuff  =================  -->
+	<div class="regularHeader" style="margin-bottom:15px"> Publication and downloads </div>
+	<div class="text">
+<p class="text">
+<p class="text">I-Chao Shen, Bing-Yu Chen, ClipGen: A Deep Generative Model for Clipart Vectorization and Synthesis, Transaction on Visualization and Computer Graphics (TVCG), 2021. 
+	<a href="https://ieeexplore.ieee.org/document/9444657">[DOI]</a></p>
+	  <p class="text">
+		  <b>Paper: </b><a href="../resource/clipgen/ClipGen_tvcg_final.pdf">[PDF, 6.8MB]</a><br>
+	  <b>Supplemental Materials: </b><a href="../resource/clipgen/ClipGen_tvcg_sup_final.pdf">[PDF, 1.9MB]</a>
+	  </p>
+	</div>
+	<!-- =============== VIDEO  =================  -->
+	<!-- <div class="regularHeader" style="margin-bottom:15px">Video</div> -->
+	<!-- <div class="text" align="center"> -->
+	<!--   <iframe width="560" height="315" src="http://www.youtube.com/embed/en7ICJRGzH0" frameborder="0" allowfullscreen="", style="-webkit-box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2)"></iframe><br><br> -->
+
+
+	<!-- =============== ABSTRACT  =================  -->
+
+	  <div class="regularHeader">Abstract</div>
+	  <p class="text">
+		This paper presents a novel deep learning-based approach for automatically vectorizing and synthesizing the clipart of man-made objects.
+		Given a raster clipart image and it's corresponding object category (e.g., airplanes), the proposed method sequentially generates new layers, each of which is composed of a new closed path filled with a single color.
+		The final result is obtained by compositing all layers together into a vector clipart that falls into the target category.
+		The proposed approach is based on an iterative generative model that (i) decides whether to continue synthesizing a new layer and (ii) determines the geometry and appearance of the new layer.
+		We formulated a joint loss function for training our generative model, including the shape similarity, symmetry, and local curve smoothness losses, as well as vector graphics rendering accuracy loss for synthesizing clipart recognizable by humans.
+		We also introduced a collection of man-made object clipart, <em>ClipNet</em>, which is composed of closed-path layers, and two designed preprocessing tasks to clean up and enrich the original raw clipart.
+		To validate the proposed approach, we conducted several experiments and demonstrated its ability to vectorize and synthesize various clipart categories.
+		We envision that our generative model can facilitate efficient and intuitive clipart designs for both novice users and graphic designers.
+	  </p>
+	  <div class="regularHeader">Acknowledgment</div>
+	  <p class="text">
+		This work was supported in part by the Ministry of Science and Technology, Taiwan, under Grant MOST109-2218-E-002-030, 109-2634-F-002-032, and National Taiwan University.
+		And we are grateful to the National Center for High-performance Computing.
+		We want to thank Tzu-mao Li, Sheng-Jie Luo, Yu-Ting Wu, Chi-Lan Yang, anonymous reviewers for insightful suggestions and discussion.
+		I-Chao Shen was supported by the MediaTek Fellowship.
+	  </p>
+
+
+	  <!-- =============== BIBTEX  =================  -->	
+	  <div class="regularHeader" style="margin-bottom:15px">BibTex</div>
+	  <div class="text">
+	    <pre>
+@article{ shen2021clipgen,	      
+author    = {I-Chao Shen and Bing-Yu Chen},
+title     = {ClipGen: A Deep Generative Model for Clipart Vectorization and Synthesis},
+journal   = {Transaction on Visualization and Computer Graphics (TVCG)},
+year      = {2021}
+}
+	    </pre>
+	  </div>
+
+	  <!-- =============== RESULTS  =================  -->	
+		<!-- <div class="regularHeader" style="margin-bottom:15px">Results</div>
+		<div align="center" style="clear:none; margin-top:10px">
+			<p><img src="../resource/zomeFab_cgf2019/iron_real.png" style="padding:5pt;max-width: 85%"></p>
+			<p><img src="../resource/zomeFab_cgf2019/totoro_real.png" style="padding:5pt;max-width: 85%"></p>
+				<p><img src="../resource/zomeFab_cgf2019/doraemon_real.png" style="max-width: 85%"></p>
+		</div> -->
+	  <hr style="margin-top:20px">
+	  <!-- <div class="text" style="margin-top:0; margin-left:auto; margin-right:auto">
+	    All non-third-party images are &copy; ACM.
+	  </div> -->
+	  <br>
+	</div>
+      </div>
+
+    </div>
+</body></html>
