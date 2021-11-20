@@ -13,7 +13,7 @@
 
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>ClipGen: A Deep Generative Model for Clipart Vectorization and Synthesis</title>
+    <title>StylePart: Image-based Shape Part Manipulation</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../css/proj_main.css">
     <!-- Favicons
@@ -62,11 +62,11 @@
 	<div class="regularHeader" style="margin-bottom:15px"> Publication and downloads </div>
 	<div class="text">
 <p class="text">
-<p class="text">I-Chao Shen, Bing-Yu Chen, ClipGen: A Deep Generative Model for Clipart Vectorization and Synthesis, Transaction on Visualization and Computer Graphics (TVCG), 2021. 
+<p class="text">I-Chao Shen, Li-Wen Su, Yu-Ting Wu, Bing-Yu Chen, StylePart: Image-based Shape Part Manipulation, arxiv, 2021. 
 	<a href="https://ieeexplore.ieee.org/document/9444657">[DOI]</a></p>
 	  <p class="text">
-		  <b>Paper: </b><a href="../resource/clipgen/ClipGen_tvcg_final.pdf">[PDF, 6.8MB]</a><br>
-	  <b>Supplemental Materials: </b><a href="../resource/clipgen/ClipGen_tvcg_sup_final.pdf">[PDF, 1.9MB]</a>
+	  <a href="https://arxiv.org/">arxiv:xxxx.xxxxx</a><br>
+	  <b>Supplemental Materials: </b><a href="../resource/stylepart/StylePart_CVPR2022_supp.pdf">[PDF, 5.5MB]</a>
 	  </p>
 	</div>
 	<!-- =============== VIDEO  =================  -->
@@ -79,32 +79,30 @@
 
 	  <div class="regularHeader">Abstract</div>
 	  <p class="text">
-		This paper presents a novel deep learning-based approach for automatically vectorizing and synthesizing the clipart of man-made objects.
-		Given a raster clipart image and it's corresponding object category (e.g., airplanes), the proposed method sequentially generates new layers, each of which is composed of a new closed path filled with a single color.
-		The final result is obtained by compositing all layers together into a vector clipart that falls into the target category.
-		The proposed approach is based on an iterative generative model that (i) decides whether to continue synthesizing a new layer and (ii) determines the geometry and appearance of the new layer.
-		We formulated a joint loss function for training our generative model, including the shape similarity, symmetry, and local curve smoothness losses, as well as vector graphics rendering accuracy loss for synthesizing clipart recognizable by humans.
-		We also introduced a collection of man-made object clipart, <em>ClipNet</em>, which is composed of closed-path layers, and two designed preprocessing tasks to clean up and enrich the original raw clipart.
-		To validate the proposed approach, we conducted several experiments and demonstrated its ability to vectorize and synthesize various clipart categories.
-		We envision that our generative model can facilitate efficient and intuitive clipart designs for both novice users and graphic designers.
+		Due to a lack of image-based "part controllers", shape manipulation of man-made shape images, such as resizing the backrest of a chair or replacing a cup handle is not intuitive because of the lack of image-based part controllers.
+		To tackle this problem, we present \prjname, a framework that enables direct shape manipulation of an image by leveraging generative models of both images and 3D shapes.
+		Our key contribution is a shape-consistent latent mapping function that connects the image generative latent space and the 3D man-made shape attribute latent space.
+		Our method "forwardly maps" the image content to its corresponding 3D shape attributes, where the shape part can be easily manipulated.
+		The attribute codes of the manipulated 3D shape are then "backwardly mapped" to the image latent code to obtain the final manipulated image.
+		We demonstrate our approach through various manipulation tasks, including part replacement, part resizing, and viewpoint manipulation, and evaluate its effectiveness through extensive ablation studies.
 	  </p>
-	  <div class="regularHeader">Acknowledgment</div>
-	  <p class="text">
+	  <!-- <div class="regularHeader">Acknowledgment</div> -->
+	  <!-- <p class="text">
 		This work was supported in part by the Ministry of Science and Technology, Taiwan, under Grant MOST109-2218-E-002-030, 109-2634-F-002-032, and National Taiwan University.
 		And we are grateful to the National Center for High-performance Computing.
 		We want to thank Tzu-mao Li, Sheng-Jie Luo, Yu-Ting Wu, Chi-Lan Yang, anonymous reviewers for insightful suggestions and discussion.
 		I-Chao Shen was supported by the MediaTek Fellowship.
-	  </p>
+	  </p> -->
 
 
 	  <!-- =============== BIBTEX  =================  -->	
 	  <div class="regularHeader" style="margin-bottom:15px">BibTex</div>
 	  <div class="text">
 	    <pre>
-@article{ shen2021clipgen,	      
-author    = {I-Chao Shen and Bing-Yu Chen},
-title     = {ClipGen: A Deep Generative Model for Clipart Vectorization and Synthesis},
-journal   = {Transaction on Visualization and Computer Graphics (TVCG)},
+@article{ shen2021stylepart,	      
+author    = {I-Chao Shen, Li-Wen Su, Yu-Ting Wu, Bing-Yu Chen},
+title     = {StylePart: Image-based Shape Part Manipulation,
+journal   = {arxiv},
 year      = {2021}
 }
 	    </pre>
