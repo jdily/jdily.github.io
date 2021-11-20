@@ -31,13 +31,13 @@ pre
     font-size: 11pt;
 }
 
-img
+/* img
 {
     -webkit-box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
     -webkit-border-radius: 6px;
     border-radius: 6px;
-}
+} */
 .main
 {
     width:1000px;
