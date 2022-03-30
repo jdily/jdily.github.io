@@ -13,7 +13,7 @@
 
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>StylePart: Image-based Shape Part Manipulation</title>
+    <title>AutoPoly: Predicting a Polygonal Mesh Construction Sequence from a Silhouette Image</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../css/proj_main.css">
     <!-- Favicons
@@ -26,34 +26,34 @@
       <div style="margin: 0pt 15pt 25pt 15pt; padding-top:10px">
 	
 	<!-- =============== PAPER INFORMATION=================  -->
-	<div class="heading center">StylePart: Image-based Shape Part Manipulation</div><br>
+	<div class="heading center">AutoPoly: Predicting a Polygonal Mesh Construction Sequence from a Silhouette Image</div><br>
 
 	<!-- NEWER AUTHOR LIST -->	
 	<div class="subheading center">
-	  <a href="http://jdily.github.io">I-Chao Shen</a><sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Li-Wen Su<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://graphics.im.ntu.edu.tw/~robin/">Bing-Yu Chen</a><sup>2</sup>
+	  <a href="http://jdily.github.io">I-Chao Shen</a><sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://scholar.google.ca/citations?user=7mZ4VXkAAAAJ&hl=en">Yu Ju (Edwin) Chen</a><sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://people.scs.carleton.ca/~olivervankaick/publications.html">Oliver van Kaick</a><sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www-ui.is.s.u-tokyo.ac.jp/~takeo/">Takeo Igarashi</a><sup>2</sup>
 	</div><br>
 
 	<div class="subsubheading center">
-		<sup>1</sup><a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <sup>2</sup><a href="https://www.ntu.edu.tw">National Taiwan University</a>
+		<sup>1</sup><a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <sup>2</sup><a href="https://ai.tencent.com/ailab/en/about/">Tencent America</a> <sup>3</sup><a href="https://carleton.ca/">Carleton University</a>
 	</div><br>
 
 
 	<!-- =============== TEASER  =================  -->
 	<div align="center" style="clear:none; margin-top:10px">
-	  <img src="../resource/stylepart/stylepart_teaser.png" style="padding:5pt; width:75%">
+	  <img src="../resource/stylepart/autopoly_img.png" style="padding:5pt; width:75%">
 	</div> 
 
 	<!-- =============== LINK TO Download stuff  =================  -->
 	<div class="regularHeader" style="margin-bottom:15px"> Publication and downloads </div>
 	<div class="text">
 <p class="text">
-<p class="text">I-Chao Shen, Li-Wen Su, Yu-Ting Wu, Bing-Yu Chen, StylePart: Image-based Shape Part Manipulation, arxiv, 2021. 
+<p class="text">I-Chao Shen, Yu Ju (Edwin) Chen, Oliver van Kaick, Takeo Igarashi, AutoPoly: Predicting a Polygonal Mesh Construction Sequence from a Silhouette Image, arxiv, 2022. 
 	<!-- <a href="https://ieeexplore.ieee.org/document/9444657">[DOI]</a></p> -->
 	  <p class="text">
-	  <b>Paper: </b><a href="https://arxiv.org/abs/2111.10520">arxiv:2111.10520</a><br>
+	  <b>Paper: </b><a href="https://arxiv.org/abs/2203.15233">arxiv:2203.15233</a><br>
 	  <!-- <b>Code: </b><a href="https://github.com/jdily/StylePart">Github</a><br> -->
 		  <b>Code: </b> coming soon!
-	  <b>Supplemental Materials: </b><a href="../resource/stylepart/StylePart_CVPR2022_supp.pdf">[PDF, 5.5MB]</a>
+
 	  </p>
 	</div>
 	<!-- =============== VIDEO  =================  -->
@@ -66,12 +66,16 @@
 
 	  <div class="regularHeader">Abstract</div>
 	  <p class="text">
-		Due to a lack of image-based "part controllers", shape manipulation of man-made shape images, such as resizing the backrest of a chair or replacing a cup handle is not intuitive.
-		To tackle this problem, we present <i>StylePart</i>, a framework that enables direct shape manipulation of an image by leveraging generative models of both images and 3D shapes.
-		Our key contribution is a shape-consistent latent mapping function that connects the image generative latent space and the 3D man-made shape attribute latent space.
-		Our method "forwardly maps" the image content to its corresponding 3D shape attributes, where the shape part can be easily manipulated.
-		The attribute codes of the manipulated 3D shape are then "backwardly mapped" to the image latent code to obtain the final manipulated image.
-		We demonstrate our approach through various manipulation tasks, including part replacement, part resizing, and viewpoint manipulation, and evaluate its effectiveness through extensive ablation studies.
+		Polygonal modeling is a core task of content creation in Computer Graphics. 
+		The complexity of modeling, in terms of the number and the order of operations and time required to execute them makes it challenging to learn and execute. 
+		Our goal is to automatically derive a polygonal modeling sequence for a given target. 
+		Then, one can learn polygonal modeling by observing the resulting sequence and also expedite the modeling process by starting from the auto-generated result. 
+		As a starting point for building a system for 3D modeling in the future, we tackle the 2D shape modeling problem and present AutoPoly, a hybrid method that generates a polygonal mesh construction sequence from a silhouette image. 
+		The key idea of our method is the use of the Monte Carlo tree search (MCTS) algorithm and differentiable rendering to separately predict sequential topological actions and geometric actions. 
+		Our hybrid method can alter topology, whereas the recently proposed inverse shape estimation methods using differentiable rendering can only handle a fixed topology. 
+		Our novel reward function encourages MCTS to select topological actions that lead to a simpler shape without self-intersection. 
+		We further designed two deep learning-based methods to improve the expansion and simulation steps in the MCTS search process: an n-step "future action prediction" network (nFAP-Net) to generate candidates for potential topological actions, and a shape warping network (WarpNet) to predict polygonal shapes given the predicted rendered images and topological actions. 
+		We demonstrate the efficiency of our method on 2D polygonal shapes of multiple man-made object categories.
 	  </p>
 	  <!-- <div class="regularHeader">Acknowledgment</div> -->
 	  <!-- <p class="text">
@@ -86,11 +90,11 @@
 	  <div class="regularHeader" style="margin-bottom:15px">BibTex</div>
 	  <div class="text">
 	    <pre>
-@article{ shen2021stylepart,	      
-author    = {I-Chao Shen, Li-Wen Su, Yu-Ting Wu, Bing-Yu Chen},
-title     = {StylePart: Image-based Shape Part Manipulation},
+@article{ shen2022autopoly,	      
+author    = {I-Chao Shen, Yu Ju (Edwin) Chen, Oliver van Kaick, Takeo Igarashi},
+title     = {AutoPoly: Predicting a Polygonal Mesh Construction Sequence from a Silhouette Image},
 journal   = {arxiv},
-year      = {2021}
+year      = {2022}
 }
 	    </pre>
 	  </div>
