@@ -1,0 +1,107 @@
+
+<html>
+  <head>
+    <!-- ==================  Google Analytics ===============  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119905150-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-119905150-1');
+   </script>
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>NeRF-In: Free-Form NeRF Inpainting with RGB-D Priors</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/proj_main.css">
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" type="image/png" href="../images/ichao_potrait.png">
+  </head>
+  
+  <body bgcolor="#dedede">
+    <div class="main">
+      <div style="margin: 0pt 15pt 25pt 15pt; padding-top:10px">
+	
+	<!-- =============== PAPER INFORMATION=================  -->
+	<div class="heading center">NeRF-In: Free-Form NeRF Inpainting with RGB-D Priors</div><br>
+
+	<!-- NEWER AUTHOR LIST -->	
+	<div class="subheading center">
+	  Hao-Kang Liu<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://jdily.github.io">I-Chao Shen</a><sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://graphics.im.ntu.edu.tw/~robin/">Bing-Yu Chen</a>
+	</div><br>
+
+	<div class="subsubheading center">
+		<sup>1</sup><a href="https://www.u-tokyo.ac.jp/en/">National Taiwan University</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <sup>2</sup><a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a>
+	</div><br>
+
+
+	<!-- =============== TEASER  =================  -->
+	<div align="center" style="clear:none; margin-top:10px">
+	  <img src="../resource/autopoly/nerfin_img.png" style="padding:5pt; width:95%">
+	</div> 
+
+	<!-- =============== LINK TO Download stuff  =================  -->
+	<div class="regularHeader" style="margin-bottom:15px"> Publication and downloads </div>
+	<div class="text">
+<p class="text">
+<p class="text">Hao-Kang Liu, I-Chao Shen, Bing-Yu Chen, NeRF-In: Free-Form NeRF Inpainting with RGB-D Priors, arxiv, 2022. 
+	<!-- <a href="https://ieeexplore.ieee.org/document/9444657">[DOI]</a></p> -->
+	  <p class="text">
+	  <b>Paper: </b><a href="https://arxiv.org/abs/xxxx.xxxxx">arxiv:xxxx.xxxxx</a><br>
+	  <!-- <b>Code: </b><a href="https://github.com/jdily/StylePart">Github</a><br> -->
+	<b>Code: </b> coming soon!
+
+
+	  </p>
+	</div>
+	<!-- =============== VIDEO  =================  -->
+	<!-- <div class="regularHeader" style="margin-bottom:15px">Video</div> -->
+	<!-- <div class="text" align="center"> -->
+	<!--   <iframe width="560" height="315" src="http://www.youtube.com/embed/en7ICJRGzH0" frameborder="0" allowfullscreen="", style="-webkit-box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2)"></iframe><br><br> -->
+
+
+	<!-- =============== ABSTRACT  =================  -->
+
+	  <div class="regularHeader">Abstract</div>
+	  <p class="text">
+		Though Neural Radiance Field (NeRF) demonstrates compelling novel view synthesis results, it is still unintuitive to edit a pre-trained NeRF because the neural network's parameters and the scene geometry/appearance are often not explicitly associated.
+		In this paper, we introduce the first framework that enables users to remove unwanted objects or retouch undesired regions in a 3D scene represented by \textbf{a pre-trained NeRF} without any category-specific data and training.
+		The user first draws a free-form mask to specify a region containing unwanted objects over a rendered view from the pre-trained NeRF.
+		Our framework first transfers the user-provided mask to other rendered views and estimates guiding color and depth images within these transferred masked regions.
+		Next, we formulate an optimization problem that jointly inpaints the image content in all masked regions across multiple views by updating the NeRF model's parameters.
+		We demonstrate our framework on diverse scenes and show it obtained visual plausible and structurally consistent results across multiple views using shorter time and less user manual efforts.
+	  </p>
+
+	  <!-- =============== BIBTEX  =================  -->	
+	  <div class="regularHeader" style="margin-bottom:15px">BibTex</div>
+	  <div class="text">
+	    <pre>
+@article{ liu2022nerfin,	      
+author    = {Hao-Kang Liu and I-Chao Shen and Bing-Yu Chen},
+title     = {NeRF-In: Free-Form NeRF Inpainting with RGB-D Priors},
+journal   = {arxiv},
+year      = {2022}
+}
+	    </pre>
+	  </div>
+
+	  <!-- =============== RESULTS  =================  -->	
+		<!-- <div class="regularHeader" style="margin-bottom:15px">Results</div>
+		<div align="center" style="clear:none; margin-top:10px">
+			<p><img src="../resource/zomeFab_cgf2019/iron_real.png" style="padding:5pt;max-width: 85%"></p>
+			<p><img src="../resource/zomeFab_cgf2019/totoro_real.png" style="padding:5pt;max-width: 85%"></p>
+				<p><img src="../resource/zomeFab_cgf2019/doraemon_real.png" style="max-width: 85%"></p>
+		</div> -->
+	  <hr style="margin-top:20px">
+	  <!-- <div class="text" style="margin-top:0; margin-left:auto; margin-right:auto">
+	    All non-third-party images are &copy; ACM.
+	  </div> -->
+	  <br>
+	</div>
+      </div>
+
+    </div>
+</body></html>
