@@ -1,0 +1,111 @@
+
+<html>
+  <head>
+    <!-- ==================  Google Analytics ===============  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119905150-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-119905150-1');
+   </script>
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>360MVSNet: Deep Multi-view Stereo Network with 360&#176 Images for Indoor Scene Reconstruction</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/proj_main.css">
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" type="image/png" href="../images/ichao_potrait.png">
+  </head>
+  
+  <body bgcolor="#dedede">
+    <div class="main">
+      <div style="margin: 0pt 15pt 25pt 15pt; padding-top:10px">
+	
+	<!-- =============== PAPER INFORMATION=================  -->
+	<div class="heading center">360MVSNet: Deep Multi-view Stereo Network with 360&#176 Images for Indoor Scene Reconstruction</div><br>
+
+	<!-- NEWER AUTHOR LIST -->	
+	<div class="subheading center">
+		Ching-Ya Chiu<sup>1</sup>,  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://kevincosner.github.io/">Yu-Ting Wu</a>a<sup>2</sup>,  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://jdily.github.io">I-Chao Shen</a><sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a><sup>1</sup>
+	</div><br>
+
+	<div class="subsubheading center">
+		<sup>1</sup><a href="https://www.ntu.edu.tw/english/index.html">National Taiwan University</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<sup>2</sup><a href="https://new.ntpu.edu.tw/">National Taipei University</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<sup>3</sup><a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a>
+	</div><br>
+
+
+	<!-- =============== TEASER  =================  -->
+	<div align="center" style="clear:none; margin-top:10px">
+	  <img src="../resource/360mvsnet/360mvsnet_thumb.png" style="padding:5pt; width:75%">
+	</div> 
+
+	<!-- =============== LINK TO Download stuff  =================  -->
+	<div class="regularHeader" style="margin-bottom:15px"> Publication and downloads </div>
+	<div class="text">
+<p class="text">
+<p class="text">Ching-Ya Chiu, Yu-Ting Wu, I-Chao Shen, Yung-Yu Chuang, 360MVSNet: Deep Multi-view Stereo Network with 360&#176 Images for Indoor Scene Reconstruction, WACV, 2023. 
+	<!-- <a href="https://ieeexplore.ieee.org/document/9444657">[DOI]</a></p> -->
+	  <p class="text">
+	  <b>Paper: </b>Coming soon!<br>
+	  <!-- <b>Code: </b><a href="https://github.com/jdily/StylePart">Github</a><br> -->
+	<!-- <b>Code: </b> coming soon! -->
+
+
+	  </p>
+	</div>
+	<!-- =============== VIDEO  =================  -->
+	<!-- <div class="regularHeader" style="margin-bottom:15px">Video</div> -->
+	<!-- <div class="text" align="center"> -->
+	<!--   <iframe width="560" height="315" src="http://www.youtube.com/embed/en7ICJRGzH0" frameborder="0" allowfullscreen="", style="-webkit-box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2)"></iframe><br><br> -->
+
+
+	<!-- =============== ABSTRACT  =================  -->
+
+	  <div class="regularHeader">Abstract</div>
+	  <p class="text">
+		Recent multi-view stereo methods have achieved promising results with the advancement of deep learning techniques.
+		Despite of the progress, due to the limited fields of view of regular images, reconstructing large indoor environments still requires collecting many images with sufficient visual overlap, which is quite labor-intensive.
+		$360\degree$ images cover a much larger field of view than regular images and would facilitate the capture process.
+		In this paper, we present 360MVSNet, the first deep learning network for multi-view stereo with 360&#176 images. 
+		Our method combines uncertainty estimation with a spherical sweeping module for 360&#176 images captured from multiple viewpoints in order to construct multi-scale cost volumes. 
+		By regressing volumes in a coarse-to-fine manner, high-resolution depth maps can be obtained.
+		Furthermore, we have constructed \textit{EQMVS}, a large-scale synthetic dataset that consists of over 50K pairs of RGB and depth maps in equirectangular projection.
+		Experimental results demonstrate that our method can reconstruct large synthetic and real-world indoor scenes with significantly better completeness than previous traditional and learning-based methods while saving both time and effort in the data acquisition process.
+	  </p>
+
+	  <!-- =============== BIBTEX  =================  -->	
+	  <div class="regularHeader" style="margin-bottom:15px">BibTex</div>
+	  <div class="text">
+	    <pre>
+@article{ chiu360mvsnet,	      
+author    = {Ching-Ya Chiu and Yu-Ting Wu and I-Chao Shen and Yung-Yu Chuang},
+title     = {360MVSNet: Deep Multi-view Stereo Network with 360° Images for Indoor Scene Reconstruction},
+journal   = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+year      = {2023}
+}
+	    </pre>
+	  </div>
+
+	  <!-- =============== RESULTS  =================  -->	
+		<!-- <div class="regularHeader" style="margin-bottom:15px">Results</div>
+		<div align="center" style="clear:none; margin-top:10px">
+			<p><img src="../resource/zomeFab_cgf2019/iron_real.png" style="padding:5pt;max-width: 85%"></p>
+			<p><img src="../resource/zomeFab_cgf2019/totoro_real.png" style="padding:5pt;max-width: 85%"></p>
+				<p><img src="../resource/zomeFab_cgf2019/doraemon_real.png" style="max-width: 85%"></p>
+		</div> -->
+	  <hr style="margin-top:20px">
+	  <!-- <div class="text" style="margin-top:0; margin-left:auto; margin-right:auto">
+	    All non-third-party images are &copy; ACM.
+	  </div> -->
+	  <br>
+	</div>
+      </div>
+
+    </div>
+</body></html>
