@@ -812,7 +812,7 @@ properly.
 
 .remove-bottom { margin-bottom: 0 !important; }
 .half-bottom { margin-bottom: 12px !important; }
-.add-bottom { margin-bottom: 14px !important; }
+.add-bottom { margin-bottom: 5px !important; }
 .no-border { border: none; }
 
 .text-center  { text-align: center !important; }
