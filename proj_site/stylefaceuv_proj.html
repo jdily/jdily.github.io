@@ -1,0 +1,122 @@
+
+<html>
+  <head>
+    <!-- ==================  Google Analytics ===============  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119905150-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-119905150-1');
+   </script>
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/proj_main.css">
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" type="image/png" href="../images/ichao_potrait.png">
+  </head>
+  
+  <body bgcolor="#dedede">
+    <div class="main">
+      <div style="margin: 0pt 15pt 25pt 15pt; padding-top:10px">
+	
+	<!-- =============== PAPER INFORMATION=================  -->
+	<div class="heading center">StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis</div><br>
+
+	<!-- NEWER AUTHOR LIST -->	
+	<div class="subheading center">
+		Wei-Chieh Chung<sup>1*</sup>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jian-Kai Zhu<sup>1*</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://jdily.github.io">I-Chao Shen</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+		<a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>3</sup>  
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a><sup>1</sup>
+	</div><br>
+
+	<div class="subsubheading center">
+		<sup>1</sup><a href="https://www.ntu.edu.tw/english/index.html">National Taiwan University</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<sup>2</sup><a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<sup>3</sup><a href="https://new.ntpu.edu.tw/">National Taipei University</a> 
+	</div><br>
+
+
+	<!-- =============== TEASER  =================  -->
+	<div align="center" style="clear:none; margin-top:10px">
+	  <img src="https://kevincosner.github.io/publications/Chung2022SFU/teaser.png" style="padding:5pt; width:100%">
+	  <!-- <p class="text">
+		Comparison of the reconstruction results using our method, COLMAP and MVSNet. 
+		(a) The visualization of camera distribution. 
+		In this scene, COLMAP and MVSNet use 300 perspective cameras with 70&#176 Field-of-View (red points) and our method uses 25 360&#176 images (blue points). 
+		(b), (c), and (d) are the reconstruction results of our method, COLMAP, and MVSNet, respectively. 
+		We show the scores of completeness/overall quality underneath each method's result (lower is better).
+		Our method boosts the reconstruction completeness while saving 12X efforts.		
+	  </p> -->
+	</div>
+
+	<!-- =============== LINK TO Download stuff  =================  -->
+	<div class="regularHeader" style="margin-bottom:15px"> Publication and downloads </div>
+	<div class="text">
+<p class="text">
+<p class="text"> Wei-Chieh Chung<sup>*</sup>, Jian-Kai Zhu<sup>*</sup>, <u>I-Chao Shen</u>, Yu-Ting Wu, Yung-Yu Chuang (*: joint first authors), StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis, BMVC, 2022. 
+	<!-- <a href="https://ieeexplore.ieee.org/document/9444657">[DOI]</a></p> -->
+	  <p class="text">
+	  <b>Paper: </b><a href="../resource/StyleFaceUV/StyleFaceUV_main.pdf">[PDF, 5.8MB]</a><br><br>
+	  <b>Supplemental Materials: </b><a href="../resource/StyleFaceUV/StyleFaceUV_supp.pdf">[PDF, 6.3MB]</a>
+	  <!-- <b>Code: </b><a href="https://github.com/jdily/StylePart">Github</a><br> -->
+	<!-- <b>Code: </b> coming soon! -->
+
+
+	  </p>
+	</div>
+	<!-- =============== VIDEO  =================  -->
+	<!-- <div class="regularHeader" style="margin-bottom:15px">Video</div> -->
+	<!-- <div class="text" align="center"> -->
+	<!--   <iframe width="560" height="315" src="http://www.youtube.com/embed/en7ICJRGzH0" frameborder="0" allowfullscreen="", style="-webkit-box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2)"></iframe><br><br> -->
+
+
+	<!-- =============== ABSTRACT  =================  -->
+
+	  <div class="regularHeader">Abstract</div>
+	  <p class="text">
+		Recent deep image generation models, such as StyleGAN2, face challenges to produce high-quality 2D face images with multi-view consistency.
+		We address this issue by proposing an approach for generating detailed 3D faces using a pre-trained StyleGAN2 model.
+		Our method estimates the 3D Morphable Model (3DMM) coefficients directly from the StyleGAN2's stylecode. 
+		To add more details to the produced 3D face models, we train a generator to produce two UV maps: a diffuse map to give the model a more faithful appearance and a generalized displacement map to add geometric details to the model.
+		To achieve multi-view consistency, we also add a symmetric view image to recover information regarding the invisible side of a single image.
+		The generated detailed 3D face models allow for consistent changes in viewing angles, expressions, and lighting conditions. 
+		Experimental results indicate that our method outperforms previous approaches both qualitatively and quantitatively.  
+	</p>
+
+	  <!-- =============== BIBTEX  =================  -->	
+	  <div class="regularHeader" style="margin-bottom:15px">BibTex</div>
+	  <div class="text">
+	    <pre>
+		@article{ chung_stylefaceuv,	      
+		author    = {Wei-Chieh Chung and Jian-Kai Zhu and I-Chao Shen and Yu-Ting Wu and Yung-Yu Chuang},
+		title     = {StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis},
+		journal   = {British Machine Vision Conference (BMVC)},
+		year      = {2022}
+		}
+	    </pre>
+	  </div>
+
+	  <!-- =============== RESULTS  =================  -->	
+		<!-- <div class="regularHeader" style="margin-bottom:15px">Results</div>
+		<div align="center" style="clear:none; margin-top:10px">
+			<p><img src="../resource/zomeFab_cgf2019/iron_real.png" style="padding:5pt;max-width: 85%"></p>
+			<p><img src="../resource/zomeFab_cgf2019/totoro_real.png" style="padding:5pt;max-width: 85%"></p>
+				<p><img src="../resource/zomeFab_cgf2019/doraemon_real.png" style="max-width: 85%"></p>
+		</div> -->
+	  <hr style="margin-top:20px">
+	  <!-- <div class="text" style="margin-top:0; margin-left:auto; margin-right:auto">
+	    All non-third-party images are &copy; ACM.
+	  </div> -->
+	  <br>
+	</div>
+      </div>
+
+    </div>
+</body></html>
