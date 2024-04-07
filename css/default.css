@@ -157,7 +157,7 @@ body {
 .about {
     background-color : #eeeeee;
     border-radius: 1%;
-    padding: 1%;
+    padding: 0.5%;
     text-align: justify;
     vertical-align:middle;
 }
@@ -200,7 +200,7 @@ p.lead {
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems in some browsers */
 em { font: 15px/30px 'opensans-italic', sans-serif; }
-strong, b { font: 14px/30px 'opensans-bold', sans-serif; }
+strong, b { font: 12px/16px 'opensans-bold', sans-serif;}
 small { font-size: 11px; line-height: inherit; }
 
 /*	Blockquotes */
