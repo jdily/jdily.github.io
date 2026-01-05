@@ -31,6 +31,42 @@
     <!-- Script
    ================================================== -->
     <script src="js/modernizr.js"></script>
+    <script>
+    let showingAll = false;
+
+    // mode: 0 -> only selected, 1 -> all
+    function togglePublications(mode) {
+        const otherPubs = document.querySelectorAll('.publication-other');
+        // console.log(otherPubs);
+        // console.log(showingAll);
+        //const btn = document.querySelector('.toggle-btn');
+        const selected_switch = document.querySelector('#selected_switch');
+        const all_switch = document.querySelector('#all_switch');
+        console.log(selected_switch);
+        console.log(all_switch);
+
+        if (mode == 0) {
+            showingAll = 0;
+            all_switch.style = '';
+            selected_switch.style.textDecoration = 'underline';
+            selected_switch.style.color = 'rgb(0,0,0)';
+        } else if (mode == 1) {
+            showingAll = 1;
+            all_switch.style.textDecoration = 'underline';
+            all_switch.style.color = 'rgb(0,0,0)';
+            selected_switch.style = '';
+        }
+        if (!showingAll) {
+            otherPubs.forEach(pub => pub.style.display = 'none');
+            // btn.textContent = 'Show All Publications';
+            // showingAll = false;
+        } else {
+            otherPubs.forEach(pub => pub.style.display = 'table-row');
+            // btn.textContent = 'Show Selected Publications';
+            // showingAll = true;
+        }
+    }
+    </script>
 
     <!-- Favicons
 	================================================== -->
@@ -41,6 +77,23 @@
         vertical-align: super;
         font-size: smaller;
         line-height: 0;
+    }
+    .publication-other {
+        display: none;
+    }
+    .toggle-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .toggle-btn:hover {
+        background-color: #45a049;
     }
     </style>
 
@@ -115,7 +168,9 @@
 
     <div class="row">
         <div id="publication" class="twelve columns">
-            <p style="font-size:16px; padding-top: 5px; font-weight: bold;">Selected Publications</p>
+            <p style="font-size:16px; padding-top: 5px; font-weight: bold;">Publications (<a id="selected_switch" href onclick="togglePublications(0); return false;" style="text-decoration: underline; color: rgb(0, 0, 0);">show selected</a> / <a href id="all_switch" onclick="togglePublications(1); return false;">show all by date</a>)</p>        
+            <!-- <button class="toggle-btn" onclick="togglePublications()">Show All Publications</button> -->
+            <a href onclick="togglePublications(); return false;">(Show All Publications)</a>
             <p>Year: <a href="#2026">2026</a> / <a href="#2025">2025</a> / <a href="#2024">2024</a> / <a href="#2023">2023</a> / <a href="#2022">2022 and before</a></p>
         </div>
     </div>
@@ -134,7 +189,7 @@
             <tr>
                 <td style="padding-right: 10px" id=2026"><h5><i>2026</i></h5></td>
             </tr>
-            <tr>
+            <tr class="publication-selected">
                 <td style="padding-right: 10px">
                     <img src="./resource/axis_dewarp/axis_dewarp_img.png" style="vertical-align: text-top;" width="100" height="inherit"/>
                 </td>
@@ -145,7 +200,7 @@
                     [<a href="https://arxiv.org/abs/2507.15000">arxiv</a>]
                 </td> 
             </tr>
-            <tr>
+            <tr class="publication-selected">
                 <td style="padding-right: 10px">
                     <img src="./resource/cascade_rectification/cascade_rectification_img.png" style="vertical-align: text-top;" width="100" height="inherit"/>
                 </td>
@@ -167,7 +222,7 @@
                     [<a href="https://arxiv.org/abs/2506.104680">arxiv</a>]
                 </td> 
             </tr>
-	        <!-- <tr>
+	         <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/layerpack/layerpack.png" style="vertical-align: text-top;" width="100" height="inherit"/>
                 </td>
@@ -178,7 +233,7 @@
                     [paper]
                 </td> 
             </tr> 
-	        <tr>
+	        <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/dual_avatar/dual_avatar.png" style="vertical-align: text-top;" width="100" height="inherit"/>
                 </td>
@@ -188,7 +243,7 @@
                     CVM 2026 <br>
                     [paper]
                 </td> 
-            </tr> -->
+            </tr>
             <tr>
                 <td style="padding-right: 10px" id="2025"><h5><i>2025</i></h5></td>
             </tr> 
@@ -322,7 +377,7 @@
                     [<a href="https://www.youtube.com/watch?v=KKSJQkWfS5o">video</a>]
                 </td> 
             </tr>
-	        <!-- <tr>
+	        <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/compact/compact_img.jpg" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -333,8 +388,8 @@
 		            [<a href="./resource/compact/compact_paper.pdf">paper</a>]
                     [<a href="./resource/compact/compact_video.mp4">video</a>]
                 </td> 
-            </tr> -->
-	        <!-- <tr>
+            </tr> 
+	        <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/multilayer_viton/multilayer_viton_img.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -345,7 +400,7 @@
 		            [<a href="./resource/multilayer_viton/multilayer_viton_paper.pdf">paper</a>]
                     [<a href="./resource/multilayer_viton/multilayer_viton_video.mp4">video</a>]
                 </td> 
-            </tr> -->
+            </tr>
             <tr>
                 <td style="padding-right: 10px" id="2024"><h5><i>2024</i></h5></td>
             </tr>
@@ -381,7 +436,7 @@
 		    [<a href='https://onlinelibrary.wiley.com/doi/10.1111/cgf.15074'>DOI</a>]
                 </td> 
             </tr>            
-            <!-- <tr>
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/vm_vton/vm_vton.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -394,8 +449,8 @@
                     [<a href="./proj_site/vm_vton_proj.html">project page</a>]
 		            [<a href="https://youtu.be/nzimjrvU6h0">video</a>]
                 </td> 
-            </tr> -->
-            <!-- <tr>
+            </tr>
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/cache_vc/cache_thumb.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -406,8 +461,8 @@
                     <font style="color:#787878">a new method for generating better cache distribution for cache-based rendering algorithms</font><br>             
 		            [<a href="https://link.springer.com/article/10.1007/s00371-023-03231-z?fbclid=IwAR0rlvsAV69RnnAzlTzOvb-D3Tu2sPRzOC4V1q1ZBnqjtMi_kLDV917jS_o">paper</a>]
                 </td> 
-            </tr> -->
-            <!-- <tr>
+            </tr>
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/stylepart/stylepart_teaser.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -421,7 +476,7 @@
 		            [<a href="./resource/stylepart/stylepart_supp.pdf">supplemental material</a>]
                     [<a href="https://arxiv.org/abs/2111.10520">arxiv</a>]
                 </td> 
-            </tr> -->
+            </tr>
             <tr>
                 <td style="padding-right: 10px" id="2023"><h5><i>2023</i></h5></td>
             </tr>
@@ -502,7 +557,7 @@
             <tr>
                 <td style="padding-right: 10px" id="2022"><h5><i>2022 & before</i></h5></td>
             </tr>
-            <!-- <tr>
+            <tr class="publication-other"></tr>
                 <td style="padding-right: 10px">
                     <img src="https://kevincosner.github.io/publications/Chung2022SFU/thumb.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -515,8 +570,8 @@
                     [<a href="./proj_site/stylefaceuv_proj.html">project page</a>]
                     [<a href="./resource/StyleFaceUV/StyleFaceUV_supp.pdf">supplemental material</a>]
                 </td> 
-            </tr> -->
-            <!-- <tr>
+            </tr>
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./resource/oden/ODEN_fig.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -530,7 +585,7 @@
                     [<a href="https://youtu.be/i4OGVdfgFxU">demo video</a>]
                     [presentation video]
                 </td> 
-            </tr> -->
+            </tr> 
             <tr>
                 <td style="padding-right: 10px">
                     <img src="./images/mannequin_teaser.png" style="vertical-align: text-top;" width="150" height="inherit"/>
@@ -548,7 +603,7 @@
                     [<a href="https://sj.jst.go.jp/news/202202/n0209-01j.html">Science Japan (JST)</a>]
                 </td> 
             </tr>
-            <!-- <tr>
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./images/ddsb_thumbnail.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -560,8 +615,8 @@
                     [<a href="../resource/ddsb/ddsb_cga.pdf">paper</a>]
                     [<a href="./proj_site/ddsb_proj.html">project page</a>]
                 </td> 
-            </tr> -->
-            <!-- <tr>
+            </tr> 
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./images/hpg21_thumb.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -573,7 +628,7 @@
                     [<a href="https://kevincosner.github.io/publications/Wu2021MSR/paper.pdf">paper</a>]
                     [<a href="https://kevincosner.github.io/publications/Wu2021MSR/index.html">project page</a>]
                 </td> 
-            </tr> -->
+            </tr> 
             <tr>
                 <td style="padding-right: 10px">
                     <img src="./images/clipgen_img.png" style="vertical-align: text-top;" width="150" height="inherit"/>
@@ -634,7 +689,7 @@
                     [<a href="http://arxiv.org/abs/1906.09787">arxiv</a>]
                 </td> 
             </tr>     
-            <!-- <tr>
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="./images/transfer_rl_rep_img.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -647,8 +702,8 @@
                     [<a href="http://arxiv.org/abs/1809.00770">arXiv</a>]
                     [<a href="https://www.youtube.com/watch?v=zYo02n9c5YY">present video</a>]
                 </td> 
-            </tr>    -->
-            <!-- <tr>
+            </tr>   
+            <tr class="publication-other">
                 <td style="padding-right: 10px">
                     <img src="https://people.cs.nycu.edu.tw/~liweichan/placeholders/project_icons/director360_icon.png" style="vertical-align: text-top;" width="150" height="inherit"/>
                 </td>
@@ -658,7 +713,7 @@
                     in proceeding of MobileHCI 2020 <br>
                     [<a href="https://dl.acm.org/doi/10.1145/3379503.3403550">paper</a>]
                 </td> 
-            </tr>    -->
+            </tr> 
             <tr>
                 <td style="padding-right: 10px">
                     <img src="./images/sig18_vec.jpg" style="vertical-align: text-top;" width="150" height="inherit"/>
