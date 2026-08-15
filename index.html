@@ -42,8 +42,6 @@
         //const btn = document.querySelector('.toggle-btn');
         const selected_switch = document.querySelector('#selected_switch');
         const all_switch = document.querySelector('#all_switch');
-        console.log(selected_switch);
-        console.log(all_switch);
 
         if (mode == 0) {
             showingAll = 0;
@@ -64,6 +62,21 @@
             otherPubs.forEach(pub => pub.style.display = 'table-row');
             // btn.textContent = 'Show Selected Publications';
             // showingAll = true;
+        }
+    }
+
+    function toggleLanguage() {
+        const intro = document.querySelector('#intro');
+        const introJ = document.querySelector('#intro_j');
+        const btn = document.querySelector('#lang_switch');
+        if (introJ.style.display === 'none') {
+            intro.style.display = 'none';
+            introJ.style.display = '';
+            btn.textContent = '[English]';
+        } else {
+            intro.style.display = '';
+            introJ.style.display = 'none';
+            btn.textContent = '[日本語]';
         }
     }
     </script>
@@ -118,13 +131,14 @@
         </div> -->
         <div class="eight columns">
             <!-- <a style="float: right" href="./index_j.html">[Japanese]</a> -->
+            <a style="float: right" href id="lang_switch" onclick="toggleLanguage(); return false;">[日本語]</a>
             <h4>I-Chao Shen</h4>
             <h6>ichaoshen@g.ecc.u-tokyo.ac.jp</h6> 
-            <p>
+            <p id="intro">
                 I am an assistant professor at Department of Computer Science, the Graduate School of Information Science and Technology, The University of Tokyo. 
-                Previously, I was a project assistant professor at Department of Creative Informatics, and was a postdoctoral researcher in the same department supported by <a href="https://www.jsps.go.jp/english/e-fellow/">JSPS Postdoctoral Fellowships</a>.
+                Previously, I was a project assistant professor at Department of Creative Informatics, and was a postdoctoral researcher in the same department supported by <a href="https://www.jsps.go.jp/english/e-fellow/">JSPS Postdoctoral Fellowships</a>, both working with Takeo Igarashi.
                 <!-- I am a member of the <a href="http://www-ui.is.s.u-tokyo.ac.jp/en/">User Interface Research Group</a> and working with <a href="https://www-ui.is.s.u-tokyo.ac.jp/~takeo/">Takeo Igarashi</a>. -->
-                I received my Ph.D. from National Taiwan University in 2020, where I was advised by Prof. Bing-Yu Chen.
+                I received my Ph.D. from National Taiwan University in 2020, where I was advised by Bing-Yu Chen.
                 <br>
                 My research focus on computer graphics, with a focus on inverse modeling of 2D graphics and 2D/3D content generation. 
                 <!-- <i>If you are interested in my research and considering about working with me, please take a look at <a href="https://www.notion.so/ichaoshen/Recruit-2fd47093d230809f8966cb673dd29b46?source=copy_link">this page</a>. -->
@@ -134,6 +148,15 @@
                 <!-- where I explore combinations between different human priors and numerical optimization  -->
                 <!-- and develop supportive system for visual content generation. -->
                 <br>
+            </p>
+            <p id="intro_j" style="display:none">
+                私は東京大学大学院情報理工学系研究科コンピュータ科学専攻の助教です。以前は創造情報学専攻の特任助教を務め、同専攻にてJSPS特別研究員（PD）として、いずれも五十嵐健夫先生のもとで研究に従事しておりました。
+                2020年に国立台湾大学にて博士号を取得し、Bing-Yu Chen先生のご指導を受けました。
+                <br>
+                私の研究はコンピュータグラフィクスを専門としており、特に2Dグラフィクスの逆問題モデリングおよび2D/3Dコンテンツ生成に焦点を当てております。共同研究の機会にご興味がございましたらお気軽にご連絡ください。
+                また、博士課程のインターンシップも積極的に募集しております（<a href="https://www.notion.so/ichaoshen/Recruit-2fd47093d230809f8966cb673dd29b46?source=copy_link">募集ページ</a>や、私の研究の一部を紹介した<a href="https://www.youtube.com/watch?v=CrK9oqpTAqo&t=1862s">オンラインウェビナー</a>もご参照ください）。
+            </p>
+            <p>
                 <i class="ai ai-cv-square ai-1x"></i> <a href="./resource/ichao_cv.pdf"><b>C.V.</b></a>  &nbsp; | &nbsp; 
                     <i class="ai ai-google-scholar-square ai-1x"></i> 
                     <a href="https://scholar.google.com/citations?user=0XSoTYMAAAAJ&hl=en"><b>Google Scholar</b></a> &nbsp; | &nbsp;
