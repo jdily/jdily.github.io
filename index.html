@@ -68,14 +68,22 @@
     function toggleLanguage() {
         const intro = document.querySelector('#intro');
         const introJ = document.querySelector('#intro_j');
+        const name = document.querySelector("#name");
+        const nameJ = document.querySelector("#name_j");
         const btn = document.querySelector('#lang_switch');
+
+
         if (introJ.style.display === 'none') {
             intro.style.display = 'none';
             introJ.style.display = '';
+            name.style.display = 'none';
+            nameJ.style.display = '';
             btn.textContent = '[English]';
         } else {
             intro.style.display = '';
             introJ.style.display = 'none';
+            name.style.display = '';
+            nameJ.style.display = 'none';
             btn.textContent = '[日本語]';
         }
     }
@@ -137,7 +145,8 @@
         <div class="eight columns">
             <!-- <a style="float: right" href="./index_j.html">[Japanese]</a> -->
             <a style="float: right" href id="lang_switch" onclick="toggleLanguage(); return false;">[日本語]</a>
-            <h4>I-Chao Shen</h4>
+            <h4 id="name"> I-Chao Shen </h4>
+            <h4 id="name_j" style="display:none">イーチャオ　シェン</h4>
             <h6>ichaoshen@g.ecc.u-tokyo.ac.jp</h6> 
             <p id="intro">
                 I am an assistant professor at Department of Computer Science, the Graduate School of Information Science and Technology, The University of Tokyo. 
